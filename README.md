@@ -4,8 +4,9 @@ A simple application that keeps your windows computer awake as long as it is run
 
 ## Building
 
-The application can be built using the MSVC compiler with the command:
+The application can be built using the MSVC compiler:
 
 ```powershell
-cl /EHsc main.cpp /Fo: build\\ /Fd: build\\ /Fe: build\\KeepWindowsAwake.exe /link user32.lib
+if (!(Test-Path build)) { New-Item -ItemType Directory -Path build }
+cl /EHsc main.cpp /Fo:build\ /Fd:build\ /Fe:build\KeepWindowsAwake.exe /link user32.lib
 ```
