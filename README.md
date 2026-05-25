@@ -10,3 +10,7 @@ The application can be built using the MSVC compiler:
 if (!(Test-Path build)) { New-Item -ItemType Directory -Path build }
 cl /EHsc main.cpp /Fo:build\ /Fd:build\ /Fe:build\KeepWindowsAwake.exe /link user32.lib
 ```
+
+## Powershell script
+
+In case you are unable to use the executable, a powershell script `keep_windows_awake.ps1` has also been provided that simulates pressing F15 as an alternative method to keep windows awake.
